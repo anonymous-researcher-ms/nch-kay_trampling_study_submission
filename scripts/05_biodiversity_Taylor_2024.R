@@ -657,28 +657,9 @@ ggplot(nmds_scores, aes(x = NMDS1, y = NMDS2)) +
 
 #### END
 
-### Old steps, 
-# 4. Abundance Analysis
-# to check if overall species abundance differs between sites:
-
-# Sum total abundance for each transect
-df$Total_Abundance <- rowSums(df[, 7:ncol(df)])
-# df$Total_Abundance <- rowSums(df[, 4:ncol(df)]) # for species means dataframe
-# Compare abundance between sites
-t_test_abundance <- t.test(Total_Abundance ~ treatment, data = df)
-print(t_test_abundance) # Results significant: t = 8.4208, df = 277.95, p-value = 2.018e-15,
-# mean in group far ; mean in group near 
-# 78.01411             39.29537 
-
-## Result for species means - pooled by transect: t = 3.4997, df = 25.672, p-value = 0.001719
-# mean in group far  mean in group near 
-# 95 percent confidence interval: 31.76429 to 122.31993
-#     157.12813           80.08602 
-
 # Explanation of Steps:
 # Alpha Diversity: Measures diversity within each transect, calculated using Shannon and Simpson indices.
 #	Beta Diversity: Measures how species composition differs between transects/sites, analyzed with Bray-Curtis and visualized via NMDS; each dot is a plot
 #	PERMANOVA: Used to test whether there are statistically significant differences in community composition between the sites.
-#	Abundance: A simple comparison of total species counts between the sites.
 # You can extend this analysis by adding more specific metrics or visualizations as required by your research.
 

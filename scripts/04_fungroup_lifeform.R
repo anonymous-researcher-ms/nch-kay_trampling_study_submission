@@ -70,15 +70,13 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 
-# Reorder Site factor for logical flow
-df_summary$site <- factor(df_summary$Site, levels = c("Taylor meadows", "Black tusk", "Panorama ridge"))
 
 lifeform_colors <- c(
   "bryophyte" = "#009E73",   # Medium green (colorblind-friendly)
   "conifer" = "#E69F00",     # Deep orange
   "dshrub" = "#56B4E9",      # Sky blue (light contrast)
   "eshrub" = "#CC79A7",      # Soft magenta-pink (differentiates from red)
-  "forbs" = "#F0E442",       # Bright yellow (high visibility)
+  "forb" = "#F0E442",       # Bright yellow (high visibility)
   "graminoid" = "#0072B2",   # Darker blue (contrasts with forbs)
   "litter" = "#999999",      # Medium gray (neutral)
   "rockcrust" = "#D55E00",   # Rust orange (good contrast with blue)
@@ -111,8 +109,7 @@ library(data.table) # faster data.frame
 df_summ_2 <-  fread(file.path("data","fun_group_summed_prop_cov.csv")) # this command works if you have loaded the data.table library/package
 
 ## otherwise load dataset with file.choose command:
-# df_summ_2 <- read.csv(file.choose()) # I chose "fun_group_summed_prop_cov.csv" 
-## working excel file is "fun_group_adjust_tot_cov.xlsx" in my RScripts working directory
+# df_summ_2 <- read.csv(file.choose()) 
 
 ## make sure vars 1-3 are as factor 4- are as numeric
 head(df_summ_2)
@@ -120,7 +117,7 @@ tail(df_summ_2)
 
 df_summ_2 <- df_summ_2 %>%
   mutate(across(1:3, as.factor)) %>%
-  mutate(across(7:ncol(df), as.numeric))
+  mutate(across(4:ncol(df_summ_2), as.numeric))
 
 # Display the structure of the modified data frame
 str(df_summ_2)
@@ -130,8 +127,6 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 
-# Reorder Site factor for logical flow
-df_summ_2$site <- factor(df_summary_2$site, levels = c("Taylor meadows", "Black tusk", "Panorama ridge"))
 
 lifeform_colors <- c(
   "bryophyte" = "#009E73",   # Medium green (colorblind-friendly)
