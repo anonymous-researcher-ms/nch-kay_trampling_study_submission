@@ -3,7 +3,7 @@
 # Goal: to analyse (with 2 Factor ANOVA) and visualize (boxplots, violinplots) the compaction values 
 # by treatment and site obtained in 2023 with soil penetrometer. Methods - see manuscript.
 # Sources: 
-# 1. Hewitt, N. Geog 374 materials 2017-2025; 
+# 1. [temporarily removed for review stage]; 
 # 2. Soetewey, Antoined (2026) Stats and R, https://statsandr.com/blog/two-way-anova-in-r/ 
 # Edited: March 2026 to update treatment/condition labels 
 

@@ -2,17 +2,7 @@
 # Data on cover of plant species to evaluate trampling effects of near and far from trail
 # Goal: to wrangle diversity info; compute species composition NMDS and visualizations; conduct analyeses (PERMANOVA)
 # Script: Sept 2024; 
-# Sources: BC Parks Github
-# Edited: Oct 1 2024_Go to line 86 end for Oct 17 Script;
-# Updated Mar 13 2025 for ggplot versions of beta diversity NMDS plots, and 
-# added plot with points colored by site
-# Updated Feb 22, 23, 2026
-# - Added sqrt transformation for percent cov values; collapsed bryophytes (single variable/columnn)
-# - Ran with crust (used this, though little change); and crust remove
-# - Re-run permanova, nmds and plot nmds in ggplot with hulls 
-# - Combined site and treatment into single figure and improved color scheme
-# - Finally re-plotted figures with centroids (sites) and ellipses (treatments)
-#    representing the 68% standard error region around treatment centroids.
+# Sources: [temporarily removed for review stage]
 #########################
 
 
